@@ -13,44 +13,52 @@ class App extends Component {
     return (
       <Router>
         <Fragment>
-          <Link to="/">
-            <button
-              type="button"
-              class="btn btn-outline-info"
-              style={{
-                display: "flex",
-                justifyContent: 'center'
-              }}
+          <div id="header"
+            style={{
+              backgroundColor: "lightblue",
+              backgroundPosition: 'center',
+              height: "200px",
+              margin: "20px",
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "center"
+            }}
+          >
+              <div id="ghibli">
+              </div>
+            <div id="buttons"
             >
-              Go Home
-            </button>
-          </Link>
+              <Link to="/">
+                <button
+                  type="button"
+                  class="btn btn-light"
+                  style={{ margin: "10px" }}
+                >
+                  Go Home
+                </button>
+              </Link>
 
-          <Link to="/Films/">
-            <button
-              type="button"
-              class="btn btn-outline-info"
-              style={{
-                display: "flex",
-                justifyContent: 'center'
-              }}
-            >
-              View Films
-            </button>
-          </Link>
+              <Link to="/Films/">
+                <button
+                  type="button"
+                  class="btn btn-light"
+                  style={{ margin: "10px" }}
+                >
+                  View Films
+                </button>
+              </Link>
 
-          <Link to="/People">
-            <button
-              type="button"
-              class="btn btn-outline-info"
-              style={{
-                display: "flex",
-                justifyContent: 'center'
-              }}
-            >
-              View People
-            </button>
-          </Link>
+              <Link to="/People">
+                <button
+                  type="button"
+                  class="btn btn-light"
+                  style={{ margin: "10px" }}
+                >
+                  View People
+                </button>
+              </Link>
+            </div>
+            </div>
           <Switch>
             <Route exact path="/" component={Home} />
             <Route path="/Films/" component={Films} />
