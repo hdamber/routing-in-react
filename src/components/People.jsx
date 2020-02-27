@@ -19,27 +19,18 @@ class People extends Component {
   render() {
     return (
       <Fragment>
+        <h2>People of Studio Ghibli Movies</h2>
         <div
-          style={{
+        style={{
             display: "flex",
             flexDirection: "column",
-            justifyContent: "center",
             alignItems: "center"
           }}
         >
           {this.state.people.map((person, key) => (
             <div
               id={key}
-              className="card"
-              style={{
-                width: "500px",
-                margin: "20px",
-                padding: "5px",
-                display: "flex",
-                flexDirection: "column",
-                justifyContent: "center",
-                alignItems: "center"
-              }}
+              className="card" id="card"
             >
               <div className="card-title">
                 <h3>{person.name}</h3>
@@ -47,7 +38,7 @@ class People extends Component {
               <div className="card-text">
                 <p>{person.age}</p>
               </div>
-              <div className="card-text">
+              {/* <div className="card-text">
                 <p>{person.gender}</p>
               </div>
               <div className="card-text">
@@ -55,7 +46,7 @@ class People extends Component {
               </div>
               <div className="card-text">
                 <p>{person.hair_color}</p>
-              </div>
+              </div> */}
             </div>
           ))}
         </div>

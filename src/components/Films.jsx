@@ -19,11 +19,11 @@ class Films extends Component {
   render() {
     return (
       <Fragment>
+        <h2>Studio Ghibli Films</h2>
         <div
           style={{
             display: "flex",
             flexDirection: "column",
-            justifyContent: "center",
             alignItems: "center"
           }}
         >
@@ -31,15 +31,6 @@ class Films extends Component {
             <div
               id={key}
               className="card"
-              style={{
-                width: "500px",
-                margin: "20px",
-                padding: "5px",
-                display: "flex",
-                flexDirection: "column",
-                justifyContent: "center",
-                alignItems: "center"
-              }}
             >
               <div className="card-title">
                 <h3>{film.title}</h3>
@@ -47,7 +38,7 @@ class Films extends Component {
               <div className="card-text">
                 <p>{film.description}</p>
               </div>
-              <div className="card-text">
+              {/* <div className="card-text">
                 <p>{film.director}</p>
               </div>
               <div className="card-text">
@@ -55,7 +46,7 @@ class Films extends Component {
               </div>
               <div className="card-text">
                 <p>{film.release_date}</p>
-              </div>
+              </div> */}
             </div>
           ))}
         </div>
